@@ -216,10 +216,12 @@ SSH на нестандартном порту: `scp -P 2222 ...`. Если ме
 
 **Пункт 6** сохраняет ключи в `~/rustdesk-backup-ДАТА.tar.gz`. Потом скрипт спросит, какая система на твоём компьютере (Windows / macOS / Linux) и куда сохранить архив (Загрузки, Документы, Рабочий стол или своя папка), и выдаст **готовую команду**. Её нужно вставить в терминал на компьютере:
 
-```powershell
-# пример для Windows → Загрузки (PowerShell)
-scp root@203.0.113.10:/root/rustdesk-backup-20261103-162444.tar.gz "$env:USERPROFILE\Downloads\rustdesk-backup-20261103-162444.tar.gz"
+```bat
+:: пример для Windows → Рабочий стол (работает и в cmd, и в PowerShell)
+powershell -NoProfile -Command "scp root@203.0.113.10:/root/rustdesk-backup-20261103-162444.tar.gz (Join-Path ([Environment]::GetFolderPath('Desktop')) 'rustdesk-backup-20261103-162444.tar.gz')"
 ```
+
+> Путь к папке команда узнаёт у самой Windows, поэтому она работает, даже если рабочий стол перенесён в OneDrive.
 
 Команда спросит пароль от сервера, после чего архив окажется в выбранной папке.
 
