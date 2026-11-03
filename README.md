@@ -7,13 +7,13 @@
 От root:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ТВОЙ_НИК/РЕПО/main/install-rustdesk.sh | bash -s -- rd.example.com
+curl -fsSL https://raw.githubusercontent.com/sxcvio/Auto-Rustdesk-One-Command/main/install-rustdesk.sh | bash -s -- rd.example.com
 ```
 
 Домен можно не указывать — тогда будет использован внешний IP сервера:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ТВОЙ_НИК/РЕПО/main/install-rustdesk.sh | bash
+curl -fsSL https://raw.githubusercontent.com/sxcvio/Auto-Rustdesk-One-Command/main/install-rustdesk.sh | bash
 ```
 
 В конце скрипт выведет данные для клиента: адрес сервера и ключ.
